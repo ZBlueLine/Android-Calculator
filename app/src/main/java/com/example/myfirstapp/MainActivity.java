@@ -138,20 +138,23 @@ public class MainActivity extends AppCompatActivity
         TextView Counttext = findViewById(R.id.Count_textView);
         String a = ram.getText().toString();
         String b = Counttext.getText().toString();
-        if(a.length()!=0&&b.length()!=0)
+        if(b.length()!=0)
         {
-            if(isDigit(b.charAt(0)))
+            if (isDigit(b.charAt(0)))
             {
                 ram.setText(b);
                 Counttext.setText("");
                 return;
             }
-            else if(b.length()==1)
+            else if (b.length() == 1)
             {
                 Counttext.setText("");
                 return;
             }
-            ram.setText(countsum(a, b));
+            if (a.length() != 0)
+            {
+                ram.setText(countsum(a, b));
+            }
             Counttext.setText("");
         }
         return;
