@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity
             return false;
     }
 
-    //?????????
+
     private String calculate(String a, String b)
     {
         int pos = 0;
@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity
         return "err";
     }
 
-    //?????????????
     private String countsum(String a,String b)
     {
         String temp = b.substring(1, b.length());
